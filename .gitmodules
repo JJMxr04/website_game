@@ -1,0 +1,3 @@
+[submodule "static/src/game/UE4Game"]
+	path = static/src/game/UE4Game
+	url = https://github.com/JJMxr04/UE4Game.git
