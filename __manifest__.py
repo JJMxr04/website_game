@@ -32,4 +32,19 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True,
+    'assets': {
+        'web.assets_frontend': [
+            'website_game/static/src/game/UE4Game/HTML5/MyProject4.css',
+            'website_game/static/src/game/UE4Game/HTML5/MyProject4.data',
+            'website_game/static/src/game/UE4Game/HTML5/MyProject4.data.js',
+            'website_game/static/src/game/UE4Game/HTML5/MyProject4.UE4.js',
+            'website_game/static/src/game/UE4Game/HTML5/UE4Game.js',
+            'website_game/static/src/game/UE4Game/HTML5/Utility.js',
+            'website_game/static/src/game/UE4Game/HTML5/UE4Game.wasm',
+            'website_game/static/src/game/UE4Game/HTML5/.htaccess'
+       
+        ]
+    },
 }

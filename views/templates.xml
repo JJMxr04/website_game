@@ -2,7 +2,7 @@
     <data>
 
         <template id="game">
-          <t name="Gamepage" t-name="website.game">
+          <t t-name="website.game">
             <t t-call="website.layout">
                 <title>Your HTML title</title>
                   <htmlData><![CDATA[<html>
@@ -26,17 +26,15 @@
 		                        <div id='loadTasks'> </div>
 	                        </div>
 	                        <!-- The "tabindex=0" specifier on the canvas is important to allow it to capture keyboard focus when clicking on it with a mouse -->
-	                        <canvas tabindex=0 id="canvas" class="emscripten" oncontextmenu="event.preventDefault()" style="display:none;">
+	                        <canvas tabindex=0 id="canvas" class="emscripten" oncontextmenu="event.preventDefault()" style="display:none;"></canvas>
+                          <!-- <canvas tabindex=0 id="canvas" class="emscripten" oncontextmenu="event.preventDefault()" style="display:none;"></canvas> -->
                         </div>
                         <div class="row buttonarea text-center" id="buttonrow">
-	                        <div class="col-sm-2 text-center"></div>
 	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" onclick="try { Module['pauseMainLoop'](); } catch(e) {console.error(e);}">Pause</button></div>
 	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" onclick="try { Module['resumeMainLoop'](); } catch(e) {console.error(e);}">Resume</button></div>
 	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" onclick="var w = document.getElementById('logwindow'); w.style.display = w.style.display ? '' : 'none';">Toggle Log</button></div>
 	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" id='clear_indexeddb' onclick="try { deleteIndexedDBStorage(); } catch(e) {console.error(e);}">Clear IndexedDB</button></div>
 	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" id="fullscreen_request">FullScreen</button></div>
-	                        <div class="col-sm-2 text-center"></div>
-	                        <div class="col-sm-2 text-center"></div>
                         </div>
                         <div class="texthalf text-normal jumbotron " id="logwindow" style='display:none'></div>
 
