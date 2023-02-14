@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 
+# class WebsiteGame(http.Controller):
+#     @http.route('/game', auth='public',website=True)
+#     def index(self, **kw):
+#         return http.request.render('website_game.game', {})
 class WebsiteGame(http.Controller):
     @http.route('/game', auth='public',website=True)
     def index(self, **kw):
-        return http.request.render('website_game.game', {})
+        return http.request.render('website_game.game2', {})
 
 
 # class WebsiteGame(http.Controller):
