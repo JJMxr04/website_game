@@ -66,9 +66,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | My project (1)</title>
     <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico">
-    <!-- <link rel="stylesheet" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css"> -->
+    <link rel="stylesheet" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css">
   </head>
-  <body>
+  <main>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
@@ -136,7 +136,7 @@
       };
       document.body.appendChild(script);
     </script>
-  </body>
+  </main>
 </html>
 
 
