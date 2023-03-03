@@ -53,10 +53,10 @@
           </t>
         </template>
 
-        <template id="game2">
-          <t t-name="website.game2">
+        <template id="jumper">
+          <t t-name="website.jumper">
             <t t-call="website.layout">
-                 <title>Unity Game 2</title>
+                 <title>Jumper</title>
                    <htmlData><![CDATA[<html>
 
 <!DOCTYPE html>

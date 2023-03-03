@@ -6,9 +6,9 @@ from odoo import http
 #     def index(self, **kw):
 #         return http.request.render('website_game.game', {})
 class WebsiteGame(http.Controller):
-    @http.route('/game', auth='public',website=True)
+    @http.route('/jumper', auth='public',website=True)
     def index(self, **kw):
-        return http.request.render('website_game.game2', {})
+        return http.request.render('website_game.jumper', {})
 
 
 # class WebsiteGame(http.Controller):
