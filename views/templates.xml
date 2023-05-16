@@ -1,57 +1,6 @@
 <odoo>
     <data>
 
-        <template id="game">
-          <t t-name="website.game">
-            <t t-call="website.layout">
-                <title>Your HTML title</title>
-                  <htmlData><![CDATA[<html>
-
-                    <html lang="en">
-                      <head>
-	                      <title>MyProject4</title>
-	                      <meta charset="utf-8">
-	                      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	                      <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-	                      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	                      <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
-
-	                      <link href="website_game/static/src/game/UE4Game/HTML5/MyProject4.css" rel="stylesheet">
-                      </head>
-                      <body>
-
-                        <div class="wrapper" id="mainarea">
-	                        <div class="alert alert-warning centered-axis-xy" style="min-height: 20px; display:none;" role="alert" id="compilingmessage">
-		                        <div id='loadTasks'> </div>
-	                        </div>
-	                        <!-- The "tabindex=0" specifier on the canvas is important to allow it to capture keyboard focus when clicking on it with a mouse -->
-	                        <canvas tabindex=0 id="canvas" class="emscripten" oncontextmenu="event.preventDefault()" style="display:none;"></canvas>
-                          <!-- <canvas tabindex=0 id="canvas" class="emscripten" oncontextmenu="event.preventDefault()" style="display:none;"></canvas> -->
-                        </div>
-                        <div class="row buttonarea text-center" id="buttonrow">
-	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" onclick="try { Module['pauseMainLoop'](); } catch(e) {console.error(e);}">Pause</button></div>
-	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" onclick="try { Module['resumeMainLoop'](); } catch(e) {console.error(e);}">Resume</button></div>
-	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" onclick="var w = document.getElementById('logwindow'); w.style.display = w.style.display ? '' : 'none';">Toggle Log</button></div>
-	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" id='clear_indexeddb' onclick="try { deleteIndexedDBStorage(); } catch(e) {console.error(e);}">Clear IndexedDB</button></div>
-	                        <div class="col-sm-2 text-center"><button type="button" class="btn btn-primary" id="fullscreen_request">FullScreen</button></div>
-                        </div>
-                        <div class="texthalf text-normal jumbotron " id="logwindow" style='display:none'></div>
-
-                        <script src="website_game/static/src/game/UE4Game/HTML5/MyProject4.UE4.js"></script>
-                      </body>
-                    </html>
-
-
-
-
-
-
-     ]]>
-    </htmlData>
-            </t>
-          </t>
-        </template>
 
         <template id="jumper">
           <t t-name="website.jumper">
@@ -59,85 +8,85 @@
                  <title>Jumper</title>
                    <htmlData><![CDATA[<html>
 
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project (1)</title>
-    <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico">
-    <link rel="stylesheet" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css">
-  </head>
-  <main>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-mobile-warning">
-        WebGL builds are not supported on mobile devices.
-      </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My project (1)</div>
-      </div>
-    </div>
-    <script>
-      <!-- var buildUrl = "Build"; -->
-      var buildUrl = "";
-      var loaderUrl = buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.loader.js";
-      var config = {
-        dataUrl: buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.data",
-        frameworkUrl: buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.framework.js",
-        codeUrl: buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "My project (1)",
-        productVersion: "2.1.0",
-      };
+                      <!DOCTYPE html>
+                        <html lang="en-us">
+                          <head>
+                            <meta charset="utf-8">
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <title>Unity WebGL Player | My project (1)</title>
+                            <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico">
+                            <link rel="stylesheet" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css">
+                          </head>
+                          <main>
+                            <div id="unity-container" class="unity-desktop">
+                              <canvas id="unity-canvas"></canvas>
+                              <div id="unity-loading-bar">
+                                <div id="unity-logo"></div>
+                                <div id="unity-progress-bar-empty">
+                                  <div id="unity-progress-bar-full"></div>
+                                </div>
+                              </div>
+                              <div id="unity-mobile-warning">
+                                WebGL builds are not supported on mobile devices.
+                              </div>
+                              <div id="unity-footer">
+                                <div id="unity-webgl-logo"></div>
+                                <div id="unity-fullscreen-button"></div>
+                                <div id="unity-build-title">My project (1)</div>
+                              </div>
+                            </div>
+                            <script>
+                              <!-- var buildUrl = "Build"; -->
+                              var buildUrl = "";
+                              var loaderUrl = buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.loader.js";
+                              var config = {
+                                dataUrl: buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.data",
+                                frameworkUrl: buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.framework.js",
+                                codeUrl: buildUrl + "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.wasm",
+                                streamingAssetsUrl: "StreamingAssets",
+                                companyName: "DefaultCompany",
+                                productName: "My project (1)",
+                                productVersion: "2.1.0",
+                              };
 
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
+                              var container = document.querySelector("#unity-container");
+                              var canvas = document.querySelector("#unity-canvas");
+                              var loadingBar = document.querySelector("#unity-loading-bar");
+                              var progressBarFull = document.querySelector("#unity-progress-bar-full");
+                              var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+                              var mobileWarning = document.querySelector("#unity-mobile-warning");
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
-        setTimeout(() => {
-          mobileWarning.style.display = "none";
-        }, 5000);
-      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-      loadingBar.style.display = "block";
+                              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                                container.className = "unity-mobile";
+                                config.devicePixelRatio = 1;
+                                mobileWarning.style.display = "block";
+                                setTimeout(() => {
+                                  mobileWarning.style.display = "none";
+                                }, 5000);
+                              } else {
+                                canvas.style.width = "960px";
+                                canvas.style.height = "600px";
+                              }
+                              loadingBar.style.display = "block";
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </main>
-</html>
+                              var script = document.createElement("script");
+                              script.src = loaderUrl;
+                              script.onload = () => {
+                                createUnityInstance(canvas, config, (progress) => {
+                                  progressBarFull.style.width = 100 * progress + "%";
+                                }).then((unityInstance) => {
+                                  loadingBar.style.display = "none";
+                                  fullscreenButton.onclick = () => {
+                                    unityInstance.SetFullscreen(1);
+                                  };
+                                }).catch((message) => {
+                                  alert(message);
+                                });
+                              };
+                              document.body.appendChild(script);
+                            </script>
+                          </main>
+                        </html>
 
 
 
@@ -150,6 +99,161 @@
             </t>
           </t>
         </template>
+
+
+
+
+
+
+
+
+            <template id="flappybird">
+          <t t-name="website.flappybird">
+            <t t-call="website.layout">
+                 <title>Jumper</title>
+                   <htmlData><![CDATA[<html>
+
+                      <!DOCTYPE html>
+                        <html lang="en-us">
+                          <head>
+                            <meta charset="utf-8">
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <title>Unity WebGL Player | Odoo_Balloon</title>
+                            <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/favicon.ico">
+                            <link rel="stylesheet" href="website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/style.css">
+                          </head>
+                          <body>
+                            <div id="unity-container" class="unity-desktop">
+                              <canvas id="unity-canvas" width=960 height=600></canvas>
+                              <div id="unity-loading-bar">
+                                <div id="unity-logo"></div>
+                                <div id="unity-progress-bar-empty">
+                                  <div id="unity-progress-bar-full"></div>
+                                </div>
+                              </div>
+                              <div id="unity-warning"> </div>
+                              <div id="unity-footer">
+                                <div id="unity-webgl-logo"></div>
+                                <div id="unity-fullscreen-button"></div>
+                              </div>
+                            </div>
+                            <script>
+                              var container = document.querySelector("#unity-container");
+                              var canvas = document.querySelector("#unity-canvas");
+                              var loadingBar = document.querySelector("#unity-loading-bar");
+                              var progressBarFull = document.querySelector("#unity-progress-bar-full");
+                              var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+                              var warningBanner = document.querySelector("#unity-warning");
+
+                              // Shows a temporary message banner/ribbon for a few seconds, or
+                              // a permanent error message on top of the canvas if type=='error'.
+                              // If type=='warning', a yellow highlight color is used.
+                              // Modify or remove this function to customize the visually presented
+                              // way that non-critical warnings and error messages are presented to the
+                              // user.
+                              function unityShowBanner(msg, type) {
+                                function updateBannerVisibility() {
+                                  warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+                                }
+                                var div = document.createElement('div');
+                                div.innerHTML = msg;
+                                warningBanner.appendChild(div);
+                                if (type == 'error') div.style = 'background: red; padding: 10px;';
+                                else {
+                                  if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+                                  setTimeout(function() {
+                                    warningBanner.removeChild(div);
+                                    updateBannerVisibility();
+                                  }, 5000);
+                                }
+                                updateBannerVisibility();
+                              }
+
+                              <!-- var buildUrl = "Build"; -->
+                              var buildUrl = "";
+                              var loaderUrl = buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.loader.js";
+                              var config = {
+                                dataUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.data",
+                                frameworkUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.framework.js",
+                                codeUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.wasm",
+                                streamingAssetsUrl: "StreamingAssets",
+                                companyName: "DefaultCompany",
+                                productName: "Odoo_Balloon",
+                                productVersion: "1.0",
+                                showBanner: unityShowBanner,
+                              };
+
+                              // By default Unity keeps WebGL canvas render target size matched with
+                              // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+                              // Set this to false if you want to decouple this synchronization from
+                              // happening inside the engine, and you would instead like to size up
+                              // the canvas DOM size and WebGL render target sizes yourself.
+                              // config.matchWebGLToCanvasSize = false;
+
+                              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                                // Mobile device style: fill the whole browser client area with the game canvas:
+
+                                var meta = document.createElement('meta');
+                                meta.name = 'viewport';
+                                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+                                document.getElementsByTagName('head')[0].appendChild(meta);
+                                container.className = "unity-mobile";
+                                canvas.className = "unity-mobile";
+
+                                // To lower canvas resolution on mobile devices to gain some
+                                // performance, uncomment the following line:
+                                // config.devicePixelRatio = 1;
+
+                                unityShowBanner('WebGL builds are not supported on mobile devices.');
+                              } else {
+                                // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+                                canvas.style.width = "960px";
+                                canvas.style.height = "600px";
+                              }
+
+                              loadingBar.style.display = "block";
+
+                              var script = document.createElement("script");
+                              script.src = loaderUrl;
+                              script.onload = () => {
+                                createUnityInstance(canvas, config, (progress) => {
+                                  progressBarFull.style.width = 100 * progress + "%";
+                                }).then((unityInstance) => {
+                                  loadingBar.style.display = "none";
+                                  fullscreenButton.onclick = () => {
+                                    unityInstance.SetFullscreen(1);
+                                  };
+                                }).catch((message) => {
+                                  alert(message);
+                                });
+                              };
+                              document.body.appendChild(script);
+                            </script>
+                          </body>
+                        </html>
+
+
+
+
+
+
+
+     ]]>
+    </htmlData>  
+            </t>
+          </t>
+        </template>
+
+
+
+
+
+
+
+
+
+
 
     </data>
 </odoo>

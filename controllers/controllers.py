@@ -10,7 +10,10 @@ class WebsiteGame(http.Controller):
     def index(self, **kw):
         return http.request.render('website_game.jumper', {})
 
-
+class WebsiteGame(http.Controller):
+    @http.route('/flappybird', auth='public',website=True)
+    def index(self, **kw):
+        return http.request.render('website_game.flappybird', {})
 # class WebsiteGame(http.Controller):
 #     @http.route('/website_game/website_game', auth='public')
 #     def index(self, **kw):
