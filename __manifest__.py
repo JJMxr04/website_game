@@ -20,13 +20,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['website','base','website_sale','product','sale'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        "views/game_snippets.xml"
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -67,9 +68,17 @@
             "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.loader.js",
             "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.wasm",
 
+            # Game Snippets JS
+            "website_game/static/src/js/game_snippets.js",
+
+            #Snippet Imagtes
+
+            "website_game/static/src/image/flappybird.png",
+            "website_game/static/src/image/jumper.png"
             
 
        
         ]
     },
+    'icon': "website_game/static/description/PixelGameBoy.png",
 }

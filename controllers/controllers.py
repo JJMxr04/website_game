@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
-from odoo import http
+# from odoo import http
 
 # class WebsiteGame(http.Controller):
 #     @http.route('/game', auth='public',website=True)
 #     def index(self, **kw):
 #         return http.request.render('website_game.game', {})
-class WebsiteGame(http.Controller):
-    @http.route('/jumper', auth='public',website=True)
-    def index(self, **kw):
-        return http.request.render('website_game.jumper', {})
+# class WebsiteGame(http.Controller):
+#     @http.route('/jumper', auth='public',website=True)
+#     def index(self, **kw):
+#         return http.request.render('website_game.jumper', {})
 
-class WebsiteGame(http.Controller):
-    @http.route('/flappybird', auth='public',website=True)
-    def index(self, **kw):
-        return http.request.render('website_game.flappybird', {})
+# class WebsiteGame(http.Controller):
+#     @http.route('/flappybird', auth='public',website=True)
+#     def index(self, **kw):
+#         return http.request.render('website_game.flappybird', {})
 # class WebsiteGame(http.Controller):
 #     @http.route('/website_game/website_game', auth='public')
 #     def index(self, **kw):
