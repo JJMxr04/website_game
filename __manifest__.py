@@ -38,20 +38,20 @@
     'assets': {
         'web.assets_frontend': [
             # Jumper
-            "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.data",
-            "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.framework.js",
-            "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.loader.js",
-            "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.wasm",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/fullscreen-button.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-empty-dark.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-empty-light.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-full-dark.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-full-light.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/unity-logo-dark.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/unity-logo-light.png",
-            "website_game/static/src/game/UE4Game/myproject1html/TemplateData/webgl-logo.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.data",
+            # "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.framework.js",
+            # "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.loader.js",
+            # "website_game/static/src/game/UE4Game/myproject1html/Build/myproject1html.wasm",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/fullscreen-button.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-empty-dark.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-empty-light.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-full-dark.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/progress-bar-full-light.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/unity-logo-dark.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/unity-logo-light.png",
+            # "website_game/static/src/game/UE4Game/myproject1html/TemplateData/webgl-logo.png",
             # FlappyBird
             "website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/favicon.ico",
             "website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/fullscreen-button.png",
@@ -74,7 +74,11 @@
             #Snippet Imagtes
 
             "website_game/static/src/image/flappybird.png",
-            "website_game/static/src/image/jumper.png"
+            "website_game/static/src/image/jumper.png",
+
+            #Javascript files so that it loads when the editor is saved
+            "website_game/static/src/js/flappy_bird.js",
+            "website_game/static/src/js/jumper.js"
             
 
        
