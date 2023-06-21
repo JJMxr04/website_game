@@ -38,4 +38,5 @@ odoo.define('website_game.website_game_dashboard', function(require){
             });
         }
     });
+
 });

@@ -31,61 +31,61 @@ updateBannerVisibility();
 
 
 var buildUrl = "";
-        var loaderUrl = buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.loader.js";
-        var config = {
-        dataUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.data",
-        frameworkUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.framework.js",
-        codeUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Odoo_Balloon",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-        };
+var FlappyloaderUrl = buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.loader.js";
+var Flappyconfig = {
+dataUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.data",
+frameworkUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.framework.js",
+codeUrl: buildUrl + "website_game/static/src/game/UE4Game/FlappyBirdGames/Build/FlappyBirdGames.wasm",
+streamingAssetsUrl: "StreamingAssets",
+companyName: "DefaultCompany",
+productName: "Odoo_Balloon",
+productVersion: "1.0",
+showBanner: unityShowBanner,
+};
 
-        // By default Unity keeps WebGL canvas render target size matched with
-        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-        // Set this to false if you want to decouple this synchronization from
-        // happening inside the engine, and you would instead like to size up
-        // the canvas DOM size and WebGL render target sizes yourself.
-        // config.matchWebGLToCanvasSize = false;
+// By default Unity keeps WebGL canvas render target size matched with
+// the DOM size of the canvas element (scaled by window.devicePixelRatio)
+// Set this to false if you want to decouple this synchronization from
+// happening inside the engine, and you would instead like to size up
+// the canvas DOM size and WebGL render target sizes yourself.
+// config.matchWebGLToCanvasSize = false;
 
-        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
+if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+// Mobile device style: fill the whole browser client area with the game canvas:
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
+var meta = document.createElement('meta');
+meta.name = 'viewport';
+meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+document.getElementsByTagName('head')[0].appendChild(meta);
+container.className = "unity-mobile";
+canvas.className = "unity-mobile";
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+// To lower canvas resolution on mobile devices to gain some
+// performance, uncomment the following line:
+// config.devicePixelRatio = 1;
 
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-        } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+unityShowBanner('WebGL builds are not supported on mobile devices.');
+} else {
+// Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-        }
+canvas.style.width = "960px";
+canvas.style.height = "600px";
+}
 
-        loadingBar.style.display = "block";
+loadingBar.style.display = "block";
 
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-            loadingBar.style.display = "none";
-            fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-            };
-        }).catch((message) => {
-            alert(message);
-        });
-        };
-        document.body.appendChild(script);
+var script = document.createElement("script");
+script.src = FlappyloaderUrl;
+script.onload = () => {
+createUnityInstance(canvas, Flappyconfig, (progress) => {
+    progressBarFull.style.width = 100 * progress + "%";
+}).then((unityInstance) => {
+    loadingBar.style.display = "none";
+    fullscreenButton.onclick = () => {
+    unityInstance.SetFullscreen(1);
+    };
+}).catch((message) => {
+    alert(message);
+});
+};
+document.body.appendChild(script);

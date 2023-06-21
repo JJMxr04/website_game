@@ -1,95 +1,92 @@
 <odoo>
-    <template id="game_snippets_Dashboard" inherit_id="website.snippets" name="Game Snippets Dashboard">
-        <!-- <xpath expr="//div[@id='snippet_structure']" position="inside"> -->
-        <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="website_game.s_flappy_bird" string="Flappy Bird" t-thumbnail="/website_game/static/src/image/flappybird.png" t-class="oe_snippet ui-draggable"></t>
-            <t t-snippet="website_game.s_jumper" string="Jumper" t-thumbnail="/website_game/static/src/image/jumper.png" t-class="oe_snippet ui-draggable"></t>
-        </xpath> 
-    </template>
+  <template id="game_snippets_Dashboard" inherit_id="website.snippets" name="Game Snippets Dashboard">
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="website_game.s_flappy_bird" string="Flappy Bird" t-thumbnail="/website_game/static/src/image/flappybird.png" t-class="oe_snippet ui-draggable"></t>
+      <t t-snippet="website_game.s_jumper" string="Jumper" t-thumbnail="/website_game/static/src/image/jumper.png" t-class="oe_snippet ui-draggable"></t>
+    </xpath> 
+  </template>
 
-<template id="s_flappy_bird" name="Flappy Bird">
-  <section class="s_flappy_bird">
-    <div class="container">
-      <p>Flappy Bird</p>
-      <title>Flappy Bird</title>
-      <htmlData><![CDATA[
-        <html>
+  <template id="s_flappy_bird" name="Flappy Bird">
+    <section class="s_flappy_bird">
+      <div class="container">
+        <p>Flappy Bird</p>
+        <title>Flappy Bird</title>
+        <htmlData><![CDATA[
+          <html>
+            <!DOCTYPE html>
+            <html lang="en-us">
+              <head>
+                <meta charset="utf-8">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <title>Unity WebGL Player | Odoo_Balloon</title>
+                <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/favicon.ico">
+                <link rel="stylesheet" href="website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/style.css">
+              </head>
+              <body>
+                <div id="unity-container" class="unity-desktop">
+                  <canvas id="unity-canvas" width="960" height="600"></canvas>
+                  <div id="unity-loading-bar">
+                    <div id="unity-logo"></div>
+                    <div id="unity-progress-bar-empty">
+                      <div id="unity-progress-bar-full"></div>
+                    </div>
+                  </div>
+                  <div id="unity-warning"></div>
+                  <div id="unity-footer">
+                    <div id="unity-webgl-logo"></div>
+                    <div id="unity-fullscreen-button"></div>
+                  </div>
+                </div>
+              </body>
+            </html>
+        ]]></htmlData>
+        <script type="text/javascript" data-oe-lazy="true" data-oe-script="website_game/static/src/js/flappy_bird.js"></script>
+      </div>
+    </section>
+  </template>
+
+  <template id="s_jumper" name="Jumper">
+    <section class="s_jumper">
+      <div class="container">
+        <p>Jumper</p>
+        <title>Jumper</title>
+        <htmlData>
+        <![CDATA[<html>
           <!DOCTYPE html>
           <html lang="en-us">
             <head>
               <meta charset="utf-8">
               <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-              <title>Unity WebGL Player | Odoo_Balloon</title>
-              <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/favicon.ico">
-              <link rel="stylesheet" href="website_game/static/src/game/UE4Game/FlappyBirdGames/TemplateData/style.css">
+              <title>Unity WebGL Player | My project (1)</title>
+              <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico">
+              <link rel="stylesheet" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css">
             </head>
             <body>
               <div id="unity-container" class="unity-desktop">
-                <canvas id="unity-canvas" width="960" height="600"></canvas>
+                <canvas id="unity-canvas"></canvas>
                 <div id="unity-loading-bar">
                   <div id="unity-logo"></div>
                   <div id="unity-progress-bar-empty">
                     <div id="unity-progress-bar-full"></div>
                   </div>
                 </div>
-                <div id="unity-warning"></div>
+                <div id="unity-mobile-warning">
+                  WebGL builds are not supported on mobile devices.
+                </div>
                 <div id="unity-footer">
                   <div id="unity-webgl-logo"></div>
                   <div id="unity-fullscreen-button"></div>
+                  <div id="unity-build-title">My project (1)</div>
                 </div>
               </div>
             </body>
           </html>
-      ]]></htmlData>
-      <!-- <script src="website_game/static/src/js/flappy_bird.js"></script> -->
-      <script type="text/javascript" data-oe-script="website_game/static/src/js/flappy_bird.js"></script>
-    </div>
-  </section>
-  <!-- <script type="text/javascript" data-oe-script="website_game/static/src/js/flappy_bird.js"></script> -->
-</template>
-
-
-    <template id="s_jumper" name="Jumper" >
-        <section class=".s_jumper">
-            <div class="container">
-                <p>Jumper</p>
-                <title>Jumper</title>
-                <htmlData>
-                <![CDATA[<html>
-                      <!DOCTYPE html>
-                        <html lang="en-us">
-                          <head>
-                            <meta charset="utf-8">
-                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-                            <title>Unity WebGL Player | My project (1)</title>
-                            <link rel="shortcut icon" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/favicon.ico">
-                            <link rel="stylesheet" href="website_game/static/src/game/UE4Game/myproject1html/TemplateData/style.css">
-                          </head>
-                          <body>
-                            <div id="unity-container" class="unity-desktop">
-                              <canvas id="unity-canvas"></canvas>
-                              <div id="unity-loading-bar">
-                                <div id="unity-logo"></div>
-                                <div id="unity-progress-bar-empty">
-                                  <div id="unity-progress-bar-full"></div>
-                                </div>
-                              </div>
-                              <div id="unity-mobile-warning">
-                                WebGL builds are not supported on mobile devices.
-                              </div>
-                              <div id="unity-footer">
-                                <div id="unity-webgl-logo"></div>
-                                <div id="unity-fullscreen-button"></div>
-                                <div id="unity-build-title">My project (1)</div>
-                              </div>
-                            </div>
-                          </body>
-                        </html>
-                    ]]>
-                </htmlData>
-                <script type="text/javascript" data-oe-script="website_game/static/src/js/jumper.js"></script> 
-            </div>
-        </section> 
-    </template>
+        ]]>
+        </htmlData>
+        <script type="text/javascript" data-oe-lazy="true" data-oe-script="website_game/static/src/js/jumper.js"></script>
+      </div>
+    </section>
+    <script type="text/javascript" data-oe-lazy="true" data-oe-script="website_game/static/src/js/jumper.js"></script>
+    
+  </template>
 </odoo>
