@@ -2,7 +2,7 @@
   <template id="game_snippets_Dashboard" inherit_id="website.snippets" name="Game Snippets Dashboard">
     <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
       <t t-snippet="website_game.s_flappy_bird" string="Flappy Bird" t-thumbnail="/website_game/static/src/image/flappybird.png" t-class="oe_snippet ui-draggable"></t>
-      <t t-snippet="website_game.s_jumper" string="Jumper" t-thumbnail="/website_game/static/src/image/jumper.png" t-class="oe_snippet ui-draggable"></t>
+      <!-- <t t-snippet="website_game.s_jumper" string="Jumper" t-thumbnail="/website_game/static/src/image/jumper.png" t-class="oe_snippet ui-draggable"></t> -->
     </xpath> 
   </template>
 
@@ -45,7 +45,7 @@
     </section>
   </template>
 
-  <template id="s_jumper" name="Jumper">
+  <!-- <template id="s_jumper" name="Jumper">
     <section class="s_jumper">
       <div class="container">
         <p>Jumper</p>
@@ -88,5 +88,5 @@
     </section>
     <script type="text/javascript" data-oe-lazy="true" data-oe-script="website_game/static/src/js/jumper.js"></script>
     
-  </template>
+  </template> -->
 </odoo>
